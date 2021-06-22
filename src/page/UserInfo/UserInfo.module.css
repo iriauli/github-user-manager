@@ -1,0 +1,74 @@
+.UserInfo {
+  display: flex;
+  padding: 1px;
+}
+
+.UserInfo img {
+  width: 100%;
+  border-radius: 50%;
+  box-shadow: 1px 1px 1px var(--shadow-color);
+}
+
+.LeftBox {
+  padding: 20px;
+  flex-basis: 25%;
+  background-image: linear-gradient(
+    to bottom right,
+    var(--main-color),
+    var(--second-color)
+  );
+  box-shadow: 1px 1px 1px var(--shadow-color);
+  border-radius: 0rem 0rem 0rem 1rem;
+}
+.LeftBox h3 {
+  font-weight: 400;
+}
+
+.Followers {
+  padding-top: 10px;
+  display: flex;
+}
+
+.Followers h4 {
+  padding-right: 20px;
+  font-weight: 400;
+}
+
+.LeftBox button {
+  width: 100%;
+  padding: 5px 26px;
+  cursor: pointer;
+}
+
+.RigthBox {
+  flex-basis: 75%;
+  padding: 10px 0px 20px 20px;
+}
+
+.Bio {
+  padding-bottom: 10px;
+}
+.Bio h3 {
+  font-weight: 300;
+}
+
+.Repos h1{
+  padding-bottom: 10px;
+}
+
+.Repos h3{
+  padding-left: 20px;
+  font-weight: 500;
+  color: #5d8aa8;
+}
+
+.Repos h3:hover{
+  padding-left: 20px;
+  color: #ff2052;
+}
+
+
+.Orgs img {
+  width: 50px;
+  height: 50px;
+}

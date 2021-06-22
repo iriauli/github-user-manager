@@ -1,0 +1,89 @@
+Header {
+  width: 1200px;
+  min-height: 10vh;
+  background-color: var(--main-color);
+  display: flex;
+  justify-content: space-between;
+  border-radius: 1rem 1rem 0rem 0rem;
+  box-shadow: 1px 1px 1px var(--shadow-color);
+}
+
+Header a {
+  text-decoration: none;
+}
+
+.Logo {
+  padding: 1rem;
+  border-radius: 1rem 0rem 0rem 0rem;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0rem 1rem 0rem 1rem;
+}
+nav ul {
+  list-style: none;
+}
+
+nav ul li a {
+  padding: 0.5rem 2rem 0.5rem 2rem;
+  border-radius: 0.3rem;
+  color: black;
+  box-shadow: 1px 1px 1px black;
+  margin-right: 10px;
+}
+
+nav ul li a:hover {
+  background-image: linear-gradient(
+    to bottom right,
+    var(--main-color),
+    var(--second-color)
+  );
+}
+
+nav ul li a.Selected {
+  padding: 0.5rem 2rem 0.5rem 2rem;
+  color: white;
+  background-image: linear-gradient(to bottom right, #b1b8be, #7c8891);
+}
+
+.Menu {
+  width: 400px;
+  background-color: thistle;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.List {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Dashboard {
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border-radius: 0.3rem;
+  color: black;
+}
+
+.Dashboard::before {
+  background-color: teal;
+}
+.Dashboard::after {
+  background-color: violet;
+}
+.Search {
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border-radius: 0.3rem;
+  color: black;
+}
+
+.Favorites {
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border-radius: 0.3rem;
+  color: black;
+}

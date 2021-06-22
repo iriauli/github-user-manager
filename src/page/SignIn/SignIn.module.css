@@ -1,0 +1,12 @@
+.SignIn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.SignIn h3 {
+  color: #00cc99;
+  padding-bottom: 20px;
+}

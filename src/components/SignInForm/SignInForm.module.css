@@ -1,0 +1,47 @@
+.Form {
+  width: 800px;
+  border-radius: 1rem;
+  padding: 20px 50px 20px 50px;
+  background-image: linear-gradient(
+    to bottom right,
+    var(--main-color),
+    var(--second-color)
+  );
+}
+
+.Form h1 {
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+input[type="password"] {
+  width: 100%;
+  padding: 10px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+.SignInButton {
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.Info {
+  padding: 20px 0px 20px 0px;
+}
+
+.Info a {
+  text-decoration: none;
+  color: red;
+}
+
+.Info a:hover {
+  text-decoration: underline;
+}
