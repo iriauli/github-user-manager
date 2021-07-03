@@ -1,0 +1,25 @@
+.ExitButton {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.Button {
+    border-radius: 50%;
+    background-image: linear-gradient(to bottom right, #da4b4e, #d73b3e);
+    border: none;
+    color: #ffffff;
+    text-align: center;
+    font-size: 16px;
+    width: 30px;
+    height: 28px;
+    transition: all 0.5s;
+    cursor: pointer;
+    font-size: 14px;
+    margin-right: 10px;
+    border: 1px solid #d73b3e;
+}
+
+.Button:hover {
+    background-color: #d73b3e;
+}
+

@@ -1,3 +1,13 @@
+.Fav h1 {
+  padding: 20px 0px 0px 20px;
+}
+
 .Favorites {
-  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 20px;
+  width: 1200px;
+  align-self: center;
+  justify-self: center;
+  padding: 20px 20px 30px 20px;
 }

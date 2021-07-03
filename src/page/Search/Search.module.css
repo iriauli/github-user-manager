@@ -12,12 +12,8 @@
 .Form {
   width: 100%;
   border-radius: 0rem 0rem 1rem 1rem;
-  padding: 20px 50px 20px 50px;
-  background-image: linear-gradient(
-    to bottom right,
-    var(--main-color),
-    var(--second-color)
-  );
+  padding: 20px 20px 20px 20px;
+  background-color: var(--main-color);
 }
 
 input[type="text"] {

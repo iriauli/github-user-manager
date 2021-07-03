@@ -1,0 +1,105 @@
+.UserCard {
+    width: 210px;
+    border-radius: 1rem;
+    text-align: center;
+    background-image: linear-gradient(
+      to bottom right,
+      var(--main-color),
+      var(--second-color)
+    );
+  }
+  
+  
+  .UserCard p {
+    font-size: 13px;
+    text-align: left;
+    padding-left: 45px;
+    padding-top: 5px;
+    font-weight: 500;
+    font-style: oblique;
+  }
+  
+  .Followers span {
+    font-size: 12px;
+    background-color: var(--second-color);
+    padding: 0px 5px;
+    border-radius: 0.3rem;
+    border: 0.1px solid #d1d5d9;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .Following span {
+    font-size: 12px;
+    background-color: var(--second-color);
+    padding: 0px 5px;
+    border-radius: 0.3rem;
+    border: 0.1px solid #d1d5d9;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .UserCard img {
+    width: 150px;
+    height: 150px;
+    border-radius: 0.3rem;
+    filter: grayscale(20%);
+    box-shadow: 1px 1px 1px var(--shadow-color);
+  }
+  
+  .UserCard h3 {
+    font-size: 1.17rem;
+    padding: 0px 0px 10px 0px;
+  }
+  
+  .CardBot {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .SeeMore {
+    display: inline-block;
+    border-radius: 1rem 0rem 1rem 0rem;
+    background-image: linear-gradient(to bottom right, #bcc2c7, #7c8891);
+    border: none;
+    color: #ffffff;
+    text-align: center;
+    font-size: 16px;
+    width: 120px;
+    transition: all 0.5s;
+    padding: 0px 10px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-right: 0 auto;
+  }
+  .SeeMore:hover {
+    background-color: #da4b4e;
+    font-style: oblique;
+    transition: 0.5s;
+  }
+  
+  .SeeMore span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .SeeMore span:after {
+    content: "\00bb";
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .SeeMore:hover span {
+    padding-right: 20px;
+  }
+  
+  .SeeMore:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+  

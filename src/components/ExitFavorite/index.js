@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useInfo } from "../../context/UserContext";
+import Styles from "./ExitFavorite.module.css";
 
 function ExitFavorite() {
   const { userInfo, favorites, setFavorites } = useContext(useInfo);
@@ -33,8 +34,8 @@ function ExitFavorite() {
           <button onClick={() => addFavorite()}>Add to Favorites</button>
         </div>
       ) : (
-        <div>
-          <button onClick={() => removeFavorite()}>Remove from Favorites</button>
+        <div className={Styles.ExitButton}>
+          <button className={Styles.Button} onClick={() => removeFavorite()}>X</button>
         </div>
       )}
     </div>

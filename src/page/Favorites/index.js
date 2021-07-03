@@ -10,13 +10,15 @@ function Favorites() {
   return (
     <>
       <Header />
+      <div className={Styles.Fav}>
+        <h1>Favorites</h1>
       <div className={Styles.Favorites}>
-<h1>Favorites</h1>
       {favorites.map((item) => (
         <div key={item.username}>
           <FavCard property={item} key={item.id} />
         </div>
       ))}
+      </div>
       </div>
     </>
   );

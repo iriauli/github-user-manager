@@ -70,7 +70,16 @@ function UserInfo() {
             <h4>{userInfo.following} following</h4>
           </div>
 
-          <div className={styles.Orgs}>{/* <h1>{orgNames.id}</h1> */}</div>
+          <div className={styles.Orgs}>
+          {organization.map((orgs) => (
+              <div key={orgs.id}>
+                <a href={`https://github.com/${orgs.login}`} target="blank">
+                  <img src={orgs.avatar_url} alt="organ" />
+                 </a>
+              </div>
+            ))}
+
+          </div>
         </div>
 
         <div className={styles.RigthBox}>
@@ -88,11 +97,6 @@ function UserInfo() {
               </div>
             ))}
 
-{organization.map((orgs) => (
-              <div key={orgs.id}>
-                  <h3>{orgs.login}</h3>
-              </div>
-            ))}
 
 
           </div>

@@ -69,8 +69,22 @@
   color: #ff2052;
 }
 
+.Orgs {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  border-radius: 0.3rem;
+}
 
 .Orgs img {
-  width: 50px;
-  height: 50px;
+  width: 65px;
+  height: 65px;
+  border-radius: 0.3rem;
+  box-shadow: 0px;
+  background-color: white;
+}
+
+.Orgs img:hover {
+  transform: rotate(6deg);
+  transition: 0.3s;
 }
