@@ -6,7 +6,7 @@
   font-size: 16px;
 }
 .Search h1 {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .Form {
@@ -32,3 +32,5 @@ input[type="text"] {
   margin: 10px 0px 10px 0px;
   cursor: pointer;
 }
+
+

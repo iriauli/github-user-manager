@@ -3,12 +3,19 @@ import { useState, useEffect } from "react";
 import { useLocation } from "react-router";
 import styles from "./UserInfo.module.css";
 import Header from "../../components/Header";
+import ToggleFavorite from "../../components/ToggleFavorite";
 
 function UserInfo() {
   const location = useLocation();
   const [userInfo, setUserInfo] = useState([]);
   const [repositories, setRepositories] = useState([]);
-  // const [organization, setOrganization] = ([]);
+  const [organization, setOrganization] = useState([]);
+
+  const formatter = new Intl.NumberFormat('en', {
+    style: 'decimal',
+    useGrouping: true,
+    notation: 'compact'
+});
 
   const fetchUrl = `https://api.github.com${location.pathname}`;
 
@@ -23,7 +30,7 @@ function UserInfo() {
   // მოგვაქვს ინფორმაცია რეპოზიტორიებზე
   // რეპოზიტორიების ველში იბეჭდება პირველი 30 რეპოზიტორია
   async function Repositories() {
-    const response = await fetch(`${fetchUrl}/repos`);
+    const response = await fetch(`${fetchUrl}/repos?per_page=10`);
     const repos = await response.json();
     return repos;
   }
@@ -37,14 +44,14 @@ function UserInfo() {
   // მოგვაქვს ინფორმაცია ორგანიზაციებზე
   // კონსოლში იბეჭდება მასივი, ორმელშიც არის პირველი 3 ორგანიზაცია
   async function Organizations() {
-    const response = await fetch(`${fetchUrl}/orgs`);
+    const response = await fetch(`${fetchUrl}/orgs?per_page=3`);
     const orgs = await response.json();
     return orgs;
   }
 
   useEffect(() => {
     Organizations().then((orgs) => {
-      console.log([orgs[0], orgs[1], orgs[2]]);
+      setOrganization(orgs);
     });
   }, []);
 
@@ -57,9 +64,9 @@ function UserInfo() {
           <h1>{userInfo.name}</h1>
           <h3>{userInfo.login}</h3>
 
-          <button>Add to Favorites</button>
+<ToggleFavorite />
           <div className={styles.Followers}>
-            <h4>{userInfo.followers} followers </h4>
+            <h4>{formatter.format(userInfo.followers)} followers </h4>
             <h4>{userInfo.following} following</h4>
           </div>
 
@@ -72,7 +79,7 @@ function UserInfo() {
           </div>
 
           <div className={styles.Repos}>
-            <h1>Repositories:</h1>
+            <h1>Top Repositories:</h1>
             {repositories.map((repos) => (
               <div key={repos.id}>
                 <a href={repos.html_url} target="blank">
@@ -80,6 +87,14 @@ function UserInfo() {
                 </a>
               </div>
             ))}
+
+{organization.map((orgs) => (
+              <div key={orgs.id}>
+                  <h3>{orgs.login}</h3>
+              </div>
+            ))}
+
+
           </div>
         </div>
       </div>

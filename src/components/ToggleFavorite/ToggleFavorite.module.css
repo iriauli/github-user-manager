@@ -1,0 +1,21 @@
+.ActiveButton {
+    background-color: #00a86b;
+    border-radius: 0.3rem;
+    color: white;
+    border: 1px solid #00945f;
+}
+
+.ActiveButton:hover {
+    background-color: #00945f;
+}
+
+.PassiveButton {
+    background-color: #da4b4e;
+    border-radius: 0.3rem;
+    color: white;
+    border: 1px solid #d73b3e;
+}
+
+.PassiveButton:hover {
+    background-color: #d73b3e;
+}

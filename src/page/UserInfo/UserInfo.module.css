@@ -3,6 +3,7 @@
   padding: 1px;
 }
 
+
 .UserInfo img {
   width: 100%;
   border-radius: 50%;
@@ -10,7 +11,7 @@
 }
 
 .LeftBox {
-  padding: 20px;
+  padding: 25px;
   flex-basis: 25%;
   background-image: linear-gradient(
     to bottom right,
@@ -38,6 +39,7 @@
   width: 100%;
   padding: 5px 26px;
   cursor: pointer;
+  font-size: 14px;
 }
 
 .RigthBox {
