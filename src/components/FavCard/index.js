@@ -5,11 +5,14 @@ import { useContext, useEffect, useState } from "react";
 import { FetchEachUser } from "../../api/FetchUsers";
 import { useInfo } from "../../context/UserContext";
 
-import ExitFavorite from "../ExitFavorite";
+import Modal from "../Modal";
+import ModalForm from "../ModalForm";
+
 
 function FavCard({ property }) {
   const [followers, setFollowers] = useState("");
   const [followings, setfollowings] = useState("");
+  const [showModal, setShowModal] = useState(false);
 
   const { setUserInfo } = useContext(useInfo);
 
@@ -33,16 +36,29 @@ function FavCard({ property }) {
   return (
     <>
    <div className={Styles.UserCard}>
-   <ExitFavorite />
+
+
+        <div className={Styles.ExitButton}>
+   <button className={Styles.Button} onClick={() => setShowModal(true)}>X</button>
+   </div>
+
+
       <h3>{property.username}</h3>
       {!property.url ? (
         " "
       ) : (
-        <img className="asdasd" src={property.url} alt="avatar" />
+        <img src={property.url} alt="avatar" />
       )}
       <p className={Styles.Followers}><span>{formatter.format(followers)}</span> followers </p>
       <p className={Styles.Following}><span>{followings}</span> following</p>
       <div className={Styles.CardBot}>
+
+      {showModal && (
+        <Modal>
+          <ModalForm property={property} setShowModal={setShowModal} />
+        </Modal>
+      )}
+
         <Link to={`/users/${property.username}`}>
           <button
             onClick={() =>

@@ -1,0 +1,57 @@
+.Modal {
+    width: 450px;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    padding: 10px 20px 10px 20px;
+    border-radius: 0.3rem;
+  }
+
+  .Avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: 0.3rem;
+      margin-top: 20px;
+  }
+
+.Buttons {
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+
+padding: 10px 0px 10px;
+}
+
+.ActiveButton {
+    width: 70px;
+    height: 30px;
+    font-size: 16px;
+    background-color: #00a86b;
+    border-radius: 0.3rem;
+    color: white;
+    border: 1px solid #00945f;
+    font-weight: 400;
+    transition: all 0.5s;
+}
+
+.ActiveButton:hover {
+    background-color: #00945f;
+}
+
+.PassiveButton {
+    width: 70px;
+    height: 30px;
+    font-size: 16px;
+    background-color: #fb3d41;
+    border-radius: 0.3rem;
+    color: white;
+    border: 1px solid #fb171b;
+    font-weight: 400;
+    transition: all 0.5s;
+}
+
+.PassiveButton:hover {
+    background-color: #fb171b;
+}

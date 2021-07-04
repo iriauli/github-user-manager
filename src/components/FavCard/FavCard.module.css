@@ -56,6 +56,33 @@
     display: flex;
     justify-content: flex-end;
   }
+
+
+  .ExitButton {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.Button {
+    border-radius: 50%;
+    background-color: #fb3d41;
+    border: none;
+    color: #ffffff;
+    text-align: center;
+    font-size: 16px;
+    width: 30px;
+    height: 28px;
+    transition: all 0.2s;
+    cursor: pointer;
+    font-size: 14px;
+    margin-right: 10px;
+    border: 1px solid #fb171b;
+}
+
+.Button:hover {
+    background-color: #fb171b;
+}
+
   
   .SeeMore {
     display: inline-block;
@@ -103,3 +130,5 @@
     right: 0;
   }
   
+
+

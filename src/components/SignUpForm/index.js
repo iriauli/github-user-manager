@@ -12,6 +12,7 @@ function SignUpForm() {
     email: "",
     birthDate: "",
     password: "",
+    confirmPassword: "",
   });
 
   const history = useHistory();
@@ -94,6 +95,18 @@ function SignUpForm() {
             type="password"
             id="password"
             name="password"
+            onChange={(e) =>
+              setUser((prev) => ({ ...prev, [e.target.name]: e.target.value }))
+            }
+          />
+        </label>
+        <label htmlFor="password">
+          Confirm Password
+          <input
+            value={user.confirmPassword}
+            type="password"
+            id="confirmPassword"
+            name="confirmPassword"
             onChange={(e) =>
               setUser((prev) => ({ ...prev, [e.target.name]: e.target.value }))
             }
