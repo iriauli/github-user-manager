@@ -84,51 +84,50 @@
 }
 
   
-  .SeeMore {
-    display: inline-block;
-    border-radius: 1rem 0rem 1rem 0rem;
-    background-image: linear-gradient(to bottom right, #bcc2c7, #7c8891);
-    border: none;
-    color: #ffffff;
-    text-align: center;
-    font-size: 16px;
-    width: 120px;
-    transition: all 0.5s;
-    padding: 0px 10px;
-    cursor: pointer;
-    font-size: 14px;
-    margin-right: 0 auto;
-  }
-  .SeeMore:hover {
-    background-color: #da4b4e;
-    font-style: oblique;
-    transition: 0.5s;
-  }
-  
-  .SeeMore span {
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    transition: 0.5s;
-  }
-  
-  .SeeMore span:after {
-    content: "\00bb";
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    right: -20px;
-    transition: 0.5s;
-  }
-  
-  .SeeMore:hover span {
-    padding-right: 20px;
-  }
-  
-  .SeeMore:hover span:after {
-    opacity: 1;
-    right: 0;
-  }
+.SeeMore {
+  display: inline-block;
+  border-radius: 1rem 0rem 1rem 0rem;
+  background-image: linear-gradient(to bottom right, #b1b8be, #7c8891);
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  width: 120px;
+  transition: all 0.5s;
+  padding: 0px 10px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-right: 0 auto;
+}
+.SeeMore:hover {
+  background-image: linear-gradient(to bottom right, #847182, #796878);
+  font-style: oblique;
+  transition: 0.5s;
+}
+
+.SeeMore span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.SeeMore span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.SeeMore:hover span {
+  padding-right: 20px;
+}
+
+.SeeMore:hover span:after {
+  opacity: 1;
+  right: 0;
+}
   
 
 
