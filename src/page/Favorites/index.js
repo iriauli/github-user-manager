@@ -1,8 +1,8 @@
 import { useContext } from "react";
 import Header from "../../components/Header";
 import Styles from "./Favorites.module.css";
-import {useInfo } from "../../context/UserContext"
-import FavCard from "../../components/FavCard";
+import { useInfo } from "../../context/UserContext";
+import FavCard from "../../components/FavoritesCard";
 
 function Favorites() {
   const { favorites } = useContext(useInfo);
@@ -12,13 +12,13 @@ function Favorites() {
       <Header />
       <div className={Styles.Fav}>
         <h1>Favorites</h1>
-      <div className={Styles.Favorites}>
-      {favorites.map((item) => (
-        <div key={item.username}>
-          <FavCard property={item} key={item.id} />
+        <div className={Styles.Favorites}>
+          {favorites.map((item) => (
+            <div key={item.username}>
+              <FavCard property={item} key={item.id} />
+            </div>
+          ))}
         </div>
-      ))}
-      </div>
       </div>
     </>
   );

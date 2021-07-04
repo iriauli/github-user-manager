@@ -3,7 +3,6 @@
   padding: 1px;
 }
 
-
 .UserInfo img {
   width: 100%;
   border-radius: 50%;
@@ -54,17 +53,17 @@
   font-weight: 300;
 }
 
-.Repos h1{
+.Repos h1 {
   padding-bottom: 10px;
 }
 
-.Repos h3{
+.Repos h3 {
   padding-left: 20px;
   font-weight: 500;
   color: #5d8aa8;
 }
 
-.Repos h3:hover{
+.Repos h3:hover {
   padding-left: 20px;
   color: #ff2052;
 }

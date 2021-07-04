@@ -7,7 +7,6 @@ function Dashboard() {
   const [page, setPage] = useState(1);
   const [users, setUsers] = useState([]);
 
-
   useEffect(() => {
     const fetchUrl = `https://api.github.com/search/users?q=followers:>=1000&per_page=${
       page * 20
@@ -20,15 +19,12 @@ function Dashboard() {
       });
   }, [page]);
 
-
-
   return (
     <React.Fragment>
       <Header />
 
       <div className={styles.Dashboard}>
-
-{/* 
+        {/* 
       {error && <h1>{error}</h1>}
         {loading && <h1>Loading...</h1>} */}
 

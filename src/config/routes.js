@@ -5,7 +5,7 @@ import Favorites from "../page/Favorites";
 import Search from "../page/Search";
 import SignIn from "../page/SignIn";
 import SignUp from "../page/SignUp";
-import UserInfo from "../page/UserInfo/UserInfo";
+import UserInfo from "../page/UserInfo";
 import ROUTES from "../constants/routes";
 
 // eslint-disable-next-line import/no-anonymous-default-export

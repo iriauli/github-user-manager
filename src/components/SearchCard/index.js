@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import Styles from "./SearchCard.module.css";
 import { useContext, useEffect, useState } from "react";
-import { FetchEachUser } from "../../api/FetchUsers";
+import { FetchIndividualUser } from "../../api/fetch";
 import { useInfo } from "../../context/UserContext";
 
 const SearchCard = ({ item }) => {
@@ -10,23 +10,21 @@ const SearchCard = ({ item }) => {
 
   const { setUserInfo } = useContext(useInfo);
 
-  const formatter = new Intl.NumberFormat('en', {
-    style: 'decimal',
+  const formatter = new Intl.NumberFormat("en", {
+    style: "decimal",
     useGrouping: true,
-    notation: 'compact'
-});
+    notation: "compact",
+  });
 
   useEffect(() => {
-    FetchEachUser(item.login).then((data) => {
+    FetchIndividualUser(item.login).then((data) => {
       setFollowers(data.followers);
     });
 
-    FetchEachUser(item.login).then((data) => {
+    FetchIndividualUser(item.login).then((data) => {
       setfollowings(data.following);
     });
   }, []);
-
-
 
   return (
     <div className={Styles.UserCard}>
@@ -37,8 +35,12 @@ const SearchCard = ({ item }) => {
       ) : (
         <img className="asdasd" src={item.avatar_url} alt="avatar" />
       )}
-      <p className={Styles.Followers}><span>{formatter.format(followers)}</span> followers </p>
-      <p className={Styles.Following}><span>{followings}</span> following</p>
+      <p className={Styles.Followers}>
+        <span>{formatter.format(followers)}</span> followers{" "}
+      </p>
+      <p className={Styles.Following}>
+        <span>{followings}</span> following
+      </p>
       <div className={Styles.CardBot}>
         <Link to={`/users/${item.login}`}>
           <button

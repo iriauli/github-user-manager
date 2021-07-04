@@ -3,7 +3,9 @@ import { useState, useEffect } from "react";
 import { useLocation } from "react-router";
 import styles from "./UserInfo.module.css";
 import Header from "../../components/Header";
-import ToggleFavorite from "../../components/ToggleFavorite";
+import AddToFavorites from "../../components/AddToFavorites";
+
+const access_token = "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";
 
 function UserInfo() {
   const location = useLocation();
@@ -11,11 +13,11 @@ function UserInfo() {
   const [repositories, setRepositories] = useState([]);
   const [organization, setOrganization] = useState([]);
 
-  const formatter = new Intl.NumberFormat('en', {
-    style: 'decimal',
+  const formatter = new Intl.NumberFormat("en", {
+    style: "decimal",
     useGrouping: true,
-    notation: 'compact'
-});
+    notation: "compact",
+  });
 
   const fetchUrl = `https://api.github.com${location.pathname}`;
 
@@ -27,10 +29,12 @@ function UserInfo() {
       });
   }, []);
 
-  // მოგვაქვს ინფორმაცია რეპოზიტორიებზე
-  // რეპოზიტორიების ველში იბეჭდება პირველი 30 რეპოზიტორია
   async function Repositories() {
-    const response = await fetch(`${fetchUrl}/repos?per_page=10`);
+    const response = await fetch(`${fetchUrl}/repos?per_page=10`, {
+      headers: {
+        Authorization: `token ${access_token}`,
+      },
+    });
     const repos = await response.json();
     return repos;
   }
@@ -41,10 +45,12 @@ function UserInfo() {
     });
   }, []);
 
-  // მოგვაქვს ინფორმაცია ორგანიზაციებზე
-  // კონსოლში იბეჭდება მასივი, ორმელშიც არის პირველი 3 ორგანიზაცია
   async function Organizations() {
-    const response = await fetch(`${fetchUrl}/orgs?per_page=3`);
+    const response = await fetch(`${fetchUrl}/orgs?per_page=3`, {
+      headers: {
+        Authorization: `token ${access_token}`,
+      },
+    });
     const orgs = await response.json();
     return orgs;
   }
@@ -64,21 +70,20 @@ function UserInfo() {
           <h1>{userInfo.name}</h1>
           <h3>{userInfo.login}</h3>
 
-<ToggleFavorite />
+          <AddToFavorites />
           <div className={styles.Followers}>
             <h4>{formatter.format(userInfo.followers)} followers </h4>
             <h4>{userInfo.following} following</h4>
           </div>
 
           <div className={styles.Orgs}>
-          {organization.map((orgs) => (
+            {organization.map((orgs) => (
               <div key={orgs.id}>
                 <a href={`https://github.com/${orgs.login}`} target="blank">
                   <img src={orgs.avatar_url} alt="organ" />
-                 </a>
+                </a>
               </div>
             ))}
-
           </div>
         </div>
 
@@ -96,9 +101,6 @@ function UserInfo() {
                 </a>
               </div>
             ))}
-
-
-
           </div>
         </div>
       </div>

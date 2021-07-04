@@ -1,9 +1,9 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useInfo } from "../../context/UserContext";
 
-import Styles from "./ToggleFavorite.module.css";
+import Styles from "./AddToFavorites.module.css";
 
-function ToggleFavorite() {
+function AddToFavorites() {
   const { userInfo, favorites, setFavorites } = useContext(useInfo);
   const [isFav, setIsFav] = useState(true);
 
@@ -32,15 +32,22 @@ function ToggleFavorite() {
     <div>
       {!isFav ? (
         <div>
-          <button className={Styles.ActiveButton} onClick={() => addFavorite()}>Add to Favorites</button>
+          <button className={Styles.ActiveButton} onClick={() => addFavorite()}>
+            Add to Favorites
+          </button>
         </div>
       ) : (
         <div>
-          <button className={Styles.PassiveButton} onClick={() => removeFavorite()}>Remove from Favorites</button>
+          <button
+            className={Styles.PassiveButton}
+            onClick={() => removeFavorite()}
+          >
+            Remove from Favorites
+          </button>
         </div>
       )}
     </div>
   );
 }
 
-export default ToggleFavorite;
+export default AddToFavorites;
