@@ -5,7 +5,7 @@ import Styles from "./UserInfo.module.css";
 import Header from "../../components/Header";
 import AddToFavorites from "../../components/AddToFavorites";
 
-const ACCESS_TOKEN = "YOUR_TOKEN";
+const ACCESS_TOKEN = "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";
 
 function UserInfo() {
   const location = useLocation();
