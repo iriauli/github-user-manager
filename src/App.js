@@ -1,5 +1,5 @@
 import { AuthContextProvider } from "./context/AuthContext";
-import { UseCotnextProvider } from "./context/UserContext";
+import { UseCotnextProvider } from "./context/AppContext";
 import Routes from "./Routes";
 
 function App() {

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import Styles from "./SearchCard.module.css";
 import { useContext, useEffect, useState } from "react";
 import { FetchIndividualUser } from "../../api/fetch";
-import { useInfo } from "../../context/UserContext";
+import { useInfo } from "../../context/AppContext";
 
 const SearchCard = ({ item }) => {
   const [followers, setFollowers] = useState("");

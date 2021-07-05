@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { useInfo } from "../../context/UserContext";
+import { useInfo } from "../../context/AppContext";
 
 import Styles from "./AddToFavorites.module.css";
 

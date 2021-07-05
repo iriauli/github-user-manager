@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { useInfo } from "../../context/UserContext";
+import { useInfo } from "../../context/AppContext";
 import styles from "./ModalForm.module.css";
 
 function ModalForm({ property, setShowModal }) {

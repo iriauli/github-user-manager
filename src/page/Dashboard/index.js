@@ -24,10 +24,6 @@ function Dashboard() {
       <Header />
 
       <div className={styles.Dashboard}>
-        {/* 
-      {error && <h1>{error}</h1>}
-        {loading && <h1>Loading...</h1>} */}
-
         {users.map((user) => (
           <Card key={user.id} user={user} />
         ))}

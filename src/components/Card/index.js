@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "./Card.module.css";
 import { FetchIndividualUser } from "../../api/fetch";
-import { useInfo } from "../../context/UserContext";
+import { useInfo } from "../../context/AppContext";
 
 function Card({ user }) {
   const [followers, setFollowers] = useState("");

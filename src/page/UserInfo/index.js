@@ -1,11 +1,11 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router";
-import styles from "./UserInfo.module.css";
+import Styles from "./UserInfo.module.css";
 import Header from "../../components/Header";
 import AddToFavorites from "../../components/AddToFavorites";
 
-const access_token = "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";
+const ACCESS_TOKEN = "YOUR_TOKEN";
 
 function UserInfo() {
   const location = useLocation();
@@ -30,13 +30,17 @@ function UserInfo() {
   }, []);
 
   async function Repositories() {
-    const response = await fetch(`${fetchUrl}/repos?per_page=10`, {
-      headers: {
-        Authorization: `token ${access_token}`,
-      },
-    });
-    const repos = await response.json();
-    return repos;
+    try {
+      const response = await fetch(`${fetchUrl}/repos?per_page=10`, {
+        headers: {
+          Authorization: `token ${ACCESS_TOKEN}`,
+        },
+      });
+      const repos = await response.json();
+      return repos;
+    } catch (error) {
+      throw new Error("");
+    }
   }
 
   useEffect(() => {
@@ -46,13 +50,17 @@ function UserInfo() {
   }, []);
 
   async function Organizations() {
-    const response = await fetch(`${fetchUrl}/orgs?per_page=3`, {
-      headers: {
-        Authorization: `token ${access_token}`,
-      },
-    });
-    const orgs = await response.json();
-    return orgs;
+    try {
+      const response = await fetch(`${fetchUrl}/orgs?per_page=3`, {
+        headers: {
+          Authorization: `token ${ACCESS_TOKEN}`,
+        },
+      });
+      const orgs = await response.json();
+      return orgs;
+    } catch (error) {
+      throw new Error("");
+    }
   }
 
   useEffect(() => {
@@ -64,35 +72,35 @@ function UserInfo() {
   return (
     <>
       <Header />
-      <div className={styles.UserInfo}>
-        <div className={styles.LeftBox}>
+      <div className={Styles.UserInfo}>
+        <div className={Styles.LeftBox}>
           <img src={userInfo.avatar_url} alt="avatar" />
           <h1>{userInfo.name}</h1>
           <h3>{userInfo.login}</h3>
 
           <AddToFavorites />
-          <div className={styles.Followers}>
+          <div className={Styles.Followers}>
             <h4>{formatter.format(userInfo.followers)} followers </h4>
             <h4>{userInfo.following} following</h4>
           </div>
 
-          <div className={styles.Orgs}>
+          <div className={Styles.Orgs}>
             {organization.map((orgs) => (
               <div key={orgs.id}>
                 <a href={`https://github.com/${orgs.login}`} target="blank">
-                  <img src={orgs.avatar_url} alt="organ" />
+                  <img src={orgs.avatar_url} alt="organisation" />
                 </a>
               </div>
             ))}
           </div>
         </div>
 
-        <div className={styles.RigthBox}>
-          <div className={styles.Bio}>
+        <div className={Styles.RigthBox}>
+          <div className={Styles.Bio}>
             <h3>{userInfo.bio}</h3>
           </div>
 
-          <div className={styles.Repos}>
+          <div className={Styles.Repos}>
             <h1>Top Repositories:</h1>
             {repositories.map((repos) => (
               <div key={repos.id}>

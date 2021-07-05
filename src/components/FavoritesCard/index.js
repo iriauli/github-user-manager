@@ -2,12 +2,12 @@ import { Link } from "react-router-dom";
 import Styles from "./FavoritesCard.module.css";
 import { useContext, useEffect, useState } from "react";
 import { FetchIndividualUser } from "../../api/fetch";
-import { useInfo } from "../../context/UserContext";
+import { useInfo } from "../../context/AppContext";
 
 import Modal from "../Modal";
 import ModalForm from "../ModalForm";
 
-function FavCard({ property }) {
+function FavoritesCard({ property }) {
   const [followers, setFollowers] = useState("");
   const [followings, setfollowings] = useState("");
   const [showModal, setShowModal] = useState(false);
@@ -75,4 +75,4 @@ function FavCard({ property }) {
   );
 }
 
-export default FavCard;
+export default FavoritesCard;
