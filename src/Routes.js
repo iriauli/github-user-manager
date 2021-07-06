@@ -2,6 +2,7 @@ import { Fragment } from "react";
 import { Route, Switch } from "react-router-dom";
 import "./index.css";
 import ROUTES_CONFIG from "./config/routes";
+import NotFound from "../src/page/NotFound";
 
 function Routes() {
   return (
@@ -27,7 +28,7 @@ function Routes() {
             );
           })}
           <Route>
-            <h1>404</h1>
+            <NotFound />
           </Route>
         </Switch>
       </section>

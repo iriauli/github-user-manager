@@ -1,0 +1,20 @@
+.NotFound {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+}
+
+.Inside {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Inside h1 {
+    font-size: 50px;
+}
+
+.Inside h2 {
+    font-size: 30px;
+}
