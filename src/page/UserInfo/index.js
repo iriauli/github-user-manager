@@ -5,7 +5,7 @@ import Styles from "./UserInfo.module.css";
 import Header from "../../components/Header";
 import AddToFavorites from "../../components/AddToFavorites";
 
-const ACCESS_TOKEN = "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";
+// const ACCESS_TOKEN = "YOUR_TOKEN";
 
 function UserInfo() {
   const location = useLocation();
@@ -32,9 +32,9 @@ function UserInfo() {
   async function Repositories() {
     try {
       const response = await fetch(`${fetchUrl}/repos?per_page=10`, {
-        headers: {
-          Authorization: `token ${ACCESS_TOKEN}`,
-        },
+        // headers: {
+        //   Authorization: `token ${ACCESS_TOKEN}`,
+        // },
       });
       const repos = await response.json();
       return repos;
@@ -52,9 +52,9 @@ function UserInfo() {
   async function Organizations() {
     try {
       const response = await fetch(`${fetchUrl}/orgs?per_page=3`, {
-        headers: {
-          Authorization: `token ${ACCESS_TOKEN}`,
-        },
+        // headers: {
+        //   Authorization: `token ${ACCESS_TOKEN}`,
+        // },
       });
       const orgs = await response.json();
       return orgs;

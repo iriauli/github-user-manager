@@ -3,7 +3,7 @@
 Final project for Tbilisi School of Communication.
 
 ## Usage
-If you want to give full access to every app functional, create your personal access token [here](https://docs.github.com/en/rest/guides/getting-started-with-the-rest-api#authentication) and paste it insted of MY_TOKEN in src/api/fetch.js and src/page/UserInfo/index.js directories.
+Unauthenticated clients can make 60 requests per hour. To get more requests per hour, you'll need to authenticate. Create your personal access token [here](https://docs.github.com/en/rest/guides/getting-started-with-the-rest-api#authentication) and paste it insted of MY_TOKEN in src/api/fetch.js and src/page/UserInfo/index.js directories.
 
 ## Interface
 
