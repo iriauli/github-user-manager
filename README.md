@@ -1,5 +1,5 @@
 
-## Github User Manager
+## GitHub User Manager
 Final project for Tbilisi School of Communication.
 
 ## Usage
