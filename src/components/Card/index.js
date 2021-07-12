@@ -9,7 +9,8 @@ function Card({ user }) {
   const [followings, setfollowings] = useState("");
 
   const { setUserInfo } = useContext(useInfo);
-
+  
+  // Format Numbers
   const formatter = new Intl.NumberFormat("en", {
     style: "decimal",
     useGrouping: true,

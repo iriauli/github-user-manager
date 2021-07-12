@@ -33,7 +33,7 @@ const SearchCard = ({ item }) => {
       {!item.avatar_url ? (
         " "
       ) : (
-        <img className="asdasd" src={item.avatar_url} alt="avatar" />
+        <img src={item.avatar_url} alt="avatar" />
       )}
       <p className={Styles.Followers}>
         <span>{formatter.format(followers)}</span> followers{" "}
