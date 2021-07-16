@@ -8,7 +8,7 @@ Unauthenticated clients can make 60 requests per hour. To get more requests, you
 ## Interface
 
 ### Sign-In
-<img src="https://user-images.githubusercontent.com/64141913/124827221-d52c6400-df86-11eb-8224-22e0820a513f.png" width="50%">
+<img src="https://user-images.githubusercontent.com/64141913/124827221-d52c6400-df86-11eb-8224-22e0820a513f.png" width="80%">
 
 ### Sign-Up
 ![signup](https://user-images.githubusercontent.com/64141913/124827265-e4131680-df86-11eb-8843-90aac5f9458e.png)
