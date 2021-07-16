@@ -1,9 +1,9 @@
 
 ## GitHub User Manager
-Final project for Tbilisi School of Communication.
+Final project for Tbilisi School of Communication. :green_heart:
 
 ## Info
-Unauthenticated clients can make 60 requests per hour. To get more requests, you'll need to authenticate. Create your personal access token [here](https://docs.github.com/en/rest/guides/getting-started-with-the-rest-api#authentication) and paste it insted of MY_TOKEN in src/api/fetch.js and src/page/UserInfo/index.js directories.
+Unauthenticated clients can make 60 requests per hour. To get more requests, you'll need to authenticate. Create your personal access token [here](https://docs.github.com/en/rest/guides/getting-started-with-the-rest-api#authentication) and paste it insted of MY_TOKEN in <del>src/api/fetch.js</del> and <del>src/page/UserInfo/index.js</del> directories. :raised_hands:
 
 ## Interface
 
