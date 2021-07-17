@@ -7,6 +7,9 @@ import { useInfo } from "../../context/AppContext";
 import Modal from "../Modal";
 import ModalForm from "../ModalForm";
 
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
+
 function FavoritesCard({ property }) {
   const [followers, setFollowers] = useState("");
   const [followings, setfollowings] = useState("");
@@ -28,7 +31,7 @@ function FavoritesCard({ property }) {
     FetchIndividualUser(property.username).then((data) => {
       setfollowings(data.following);
     });
-  }, []);
+  }, [property.username]);
 
   return (
     <>
@@ -40,7 +43,7 @@ function FavoritesCard({ property }) {
         </div>
 
         <h3>{property.username}</h3>
-        {!property.url ? " " : <img src={property.url} alt="avatar" />}
+        {!property.url ? " " : <LazyLoadImage effect="blur" src={property.url} alt="avatar" />}
         <p className={Styles.Followers}>
           <span>{formatter.format(followers)}</span> followers{" "}
         </p>

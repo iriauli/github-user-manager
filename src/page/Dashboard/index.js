@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from "react";
 import styles from "./Dashboard.module.css";
 import Header from "../../components/Header";
@@ -11,12 +12,18 @@ function Dashboard() {
   const [loading, setLoading] = useState({});
   const [error, setError] = useState("");
 
+  const ACCESS_TOKEN = process.env.REACT_APP_GITHUB_TOKEN;
+
   useEffect(() => {
-    const fetchUrl = `https://api.github.com/search/users?q=followers:>=1000&per_page=${
+    const fetchUrl = `${process.env.REACT_APP_GITHUB_API}/search/users?q=followers:>=1000&per_page=${
       page * 20
     }`;
 
-    fetch(fetchUrl)
+    fetch(fetchUrl, {
+      headers: {
+        Authorization: `token ${ACCESS_TOKEN}`,
+      },
+    })
       .then((response) => response.json())
       .then((data) => {
         setUsers(data.items);

@@ -4,12 +4,15 @@ import styles from "./Card.module.css";
 import { FetchIndividualUser } from "../../api/fetch";
 import { useInfo } from "../../context/AppContext";
 
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
+
 function Card({ user }) {
   const [followers, setFollowers] = useState("");
   const [followings, setfollowings] = useState("");
 
   const { setUserInfo } = useContext(useInfo);
-  
+
   // Format Numbers
   const formatter = new Intl.NumberFormat("en", {
     style: "decimal",
@@ -30,7 +33,7 @@ function Card({ user }) {
   return (
     <div className={styles.UserCard}>
       <h3>{user.login}</h3>
-      <img src={user.avatar_url} alt="avatar" />
+      <LazyLoadImage effect="blur" src={user.avatar_url} alt="avatar" />
       <p className={styles.Followers}>
         <span>{formatter.format(followers)}</span> Followers{" "}
       </p>

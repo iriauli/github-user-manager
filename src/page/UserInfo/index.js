@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router";
 
@@ -23,8 +24,8 @@ function UserInfo() {
   });
 
   // API URL & ACCESS TOKEN
-  const API_URL = `https://api.github.com${location.pathname}`;
-  const ACCESS_TOKEN = "PASTE_YOUR_TOKEN_HERE";
+  const API_URL = `${process.env.REACT_APP_GITHUB_API}${location.pathname}`;
+  const ACCESS_TOKEN = process.env.REACT_APP_GITHUB_TOKEN;
 
   // Fetch User Info
   async function Information() {

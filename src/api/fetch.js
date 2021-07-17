@@ -1,7 +1,7 @@
 import axios from "axios";
 
-const API_URL = "https://api.github.com";
-const ACCESS_TOKEN = "PASTE_YOUR_TOKEN_HERE";
+const API_URL = process.env.REACT_APP_GITHUB_API;
+const ACCESS_TOKEN = process.env.REACT_APP_GITHUB_TOKEN;
 
 async function FetchIndividualUser(login) {
   try {
