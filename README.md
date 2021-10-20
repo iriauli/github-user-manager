@@ -1,6 +1,7 @@
 
 ## GitHub User Manager
 Final project for Tbilisi School of Communication. :green_heart:
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Info
